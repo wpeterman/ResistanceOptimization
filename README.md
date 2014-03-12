@@ -11,7 +11,6 @@ library(devtools) # Loads devtools
 install_github("wpeterman/ResistanceOptimization")
 require(ResistanceOptimization)
 
-##############################################
 In order to use this package, you must have CIRCUITSCAPE installed
 I recommend the 4.0 Beta release:
 https://github.com/Circuitscape/Circuitscape/releases
