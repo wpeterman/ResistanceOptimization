@@ -1,0 +1,11 @@
+Package: ResistanceOptimization
+Type: Package
+Title: Optimizes continuous resistance surfaces using Circuitscape
+Version: 1.0
+Depends: lme4 (>= 1.0),raster, plyr
+Date: 2014-03-12
+Author: Bill Peterman
+Maintainer: Bill Peterman <bill.peterman@gmail.com>
+Description: This 'pseudo-package' contains functions to optimize CONTINUOUS
+    resistance surfaces.
+License: GPL-3
