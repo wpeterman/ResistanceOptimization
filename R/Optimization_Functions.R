@@ -8,7 +8,12 @@ Response.Figs<- function(Optim.input){
 PDF.dir <- paste0(Optim.input$Results.dir,"Plots/")
 for (i in 1:nrow(Top.params)){
   ASCII.file <- list.files(Optim.input$ASCII.dir,pattern=paste0(Top.params[i,1],".asc"),full.names=TRUE)
+  if(Top.params[i,5]<1e-5 | Top.params[i,6]<1e-5) {
+    cat(paste0("Plotting of ", Top.params[i,1]," could not be completed due to extremely small parameter estimates."),"\n")
+    next # Use 'next' command to avoid testing invalid combinations    
+  } else {
   PLOT.response(PARM=Top.params[i,c(5,6)],Resistance=ASCII.file,equation=Top.params[i,2],AIC=Top.params[i,7], OutputFolder=PDF.dir)
+    }
   }
 }
 #######################################
@@ -193,16 +198,17 @@ for (i in 1:length(Top.Models)){
   names(rast)<-Optim.input$ASCII.names[i]
   Resistance.Optimization_func(PARM=log(c(param$Opt.Shape,param$Opt.Max)),Resistance=rast,equation=param$Eq,get.best="true",Optim.input=Optim.input2)
 }
-  # Create response figures
-  Response.Figs(Optim.input) # Input object created from running 'Optim.prep' in step 1 above
-  
-  # Boostrap
+    # Boostrap
   if(Optim.input$Bootstrap==TRUE){
   Optim.Boot(boot.iters=Optim.input$boot.iters,   #  Number of boostrap iterations (Default = 10 000)
              Optim.input=Optim.input, # Optim input object created from running 'Optim.prep"
              Sample_Proportion=0.75 # Proportion of samples to be included in each bootstrap iteration (Default = 0.75)
   )
   }
+  
+  # Create response figures
+  Response.Figs(Optim.input) # Input object created from running 'Optim.prep' in step 1 above
+  
   # Generate parameter estimates
   Coeff.Table(resist.dir=paste0(Optim.input$Results.dir,"Final_CS_Surfaces/"),genetic.dist.vec=Optim.input$Response.vec,Optim.input=Optim.input)
   unlink(paste0(Optim.input$Results.dir,"tmp"),recursive=TRUE)
