@@ -200,7 +200,8 @@ for (i in 1:length(Top.Models)){
 }
     # Boostrap
   if(Optim.input$Bootstrap==TRUE){
-  Optim.Boot(boot.iters=Optim.input$boot.iters,   #  Number of boostrap iterations (Default = 10 000)
+    cat("\n", paste0("Conducting bootstrap: ", Optim.input$boot.iters, " iterations"), "\n")
+    Optim.Boot(boot.iters=Optim.input$boot.iters,   #  Number of boostrap iterations (Default = 10 000)
              Optim.input=Optim.input, # Optim input object created from running 'Optim.prep"
              Sample_Proportion=0.75 # Proportion of samples to be included in each bootstrap iteration (Default = 0.75)
   )

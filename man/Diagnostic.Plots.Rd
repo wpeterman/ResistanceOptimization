@@ -33,8 +33,8 @@ Directory to output PDF of diagnostic plots (can use "paste0(Optim.input$Results
 }
 \value{
 This function will produce a single PDF called DiagnotisticPlots containing four plots.
-1) The relationship between the optimized resistance value and your pairwise distance provided as a respsonse (genetic distance)
-2) Scatterplot of the mixed effect model residuals in relation to resistance distance
+1) The relationship between the optimized resistance value and your pairwise distance provided as a response (genetic distance)
+2) Scatter plot of the mixed effect model residuals in relation to resistance distance
 3) Distribution of residuals
 4) Q-Q plot 
 }

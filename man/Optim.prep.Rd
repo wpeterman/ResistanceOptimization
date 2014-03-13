@@ -38,7 +38,7 @@ Select 4 or 8 to designate the connection scheme to use in CIRCUITSCAPE (Default
 The fixed maximum resistance value to use during the initial constrained grid search (Default = 100)
 }
   \item{Initial.shape}{
-The initial shape parameters to test in contrained grid search (Default = c(seq(0.2,1,by=0.2),seq(1.25,10.75,by=0.75)))
+The initial shape parameters to test in constrained grid search (Default = c(seq(0.2,1,by=0.2),seq(1.25,10.75,by=0.75)))
 }
   \item{Bootstrap}{
 Logical,if TRUE, specify the number of bootstrap iterations for 'boot.iters'
