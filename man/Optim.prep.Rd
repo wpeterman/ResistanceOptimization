@@ -8,7 +8,7 @@ Prepare elements for optimization
 This function prepares and compiles the necessary components to execute subsequent optimization functions, and must be run first. To run the example data, download the data from GitHub (url)
 }
 \usage{
-Optim.prep(Response, n.Pops, ASCII.dir, CS_Point.File, CS.exe, Neighbor.Connect = 8, Results.dir, Constrained.Max = 100, Initial.shape = c(seq(0.2, 1, by = 0.2), seq(1.25, 10.75, by = 0.75)), Bootstrap = FALSE, boot.iters = 10000, Sample_Proportion = 0.75)
+Optim.prep(Response, n.Pops, ASCII.dir, CS_Point.File, CS.exe, Neighbor.Connect = 8, Constrained.Max = 100, Initial.shape = c(seq(0.2, 1, by = 0.2), seq(1.25, 10.75, by = 0.75)), Bootstrap = FALSE, boot.iters = 10000, Sample_Proportion = 0.75)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -27,15 +27,12 @@ The path to the Circuitscape formatted point file. See Circuitscape documentatio
   \item{CS.exe}{
 The path to the CIRCUITSCAPE executable file (cs_run.exe). 
 For example: 
-'"C:/Program Files/Circuitscape/4.0/Circuitscape/cs_run.exe"'
+'"C:/Program Files/Circuitscape/cs_run.exe"'
 
 ***NOTE: Double quotation used***
 }
   \item{Neighbor.Connect}{
 Select 4 or 8 to designate the connection scheme to use in CIRCUITSCAPE (Default = 8)
-}
-  \item{Results.dir}{
-Directory where you want results written to. Should be different from the directory with ASCII files. Make sure to end with "/"
 }
   \item{Constrained.Max}{
 The fixed maximum resistance value to use during the initial constrained grid search (Default = 100)
@@ -47,7 +44,7 @@ The initial shape parameters to test in contrained grid search (Default = c(seq(
 Logical,if TRUE, specify the number of bootstrap iterations for 'boot.iters'
 }
   \item{boot.iters}{
-Number of bootstrap iterations (Default = 10 000)
+Number of bootstrap iterations (Default = 10,000)
 }
   \item{Sample_Proportion}{
 Proportion of samples to be included in each bootstrap iteration (Default = 0.75)

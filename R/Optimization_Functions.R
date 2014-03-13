@@ -432,7 +432,7 @@ Resistance.Optimization_func<-function(PARM,Resistance,equation, Optim.input,get
 #   }
 ##########################################################################################
   # Run Circuitscape
-  CS.exe<-CS.exe
+  CS.exe=Optim.input$CS.exe
   
   # Keep status of each run hidden? Set to either 'TRUE' or 'FALSE'; If 'FALSE' updates will be visible on screen
   hidden = TRUE
@@ -560,8 +560,8 @@ RESIST.t[is.na(RESIST.t[])]<-1
 #     }
 ##########################################################################################
     # Run Circuitscape
-    CS.exe<-CS.exe
-    
+  CS.exe=Optim.input$CS.exe
+  
     # Keep status of each run hidden? Set to either 'TRUE' or 'FALSE'; If 'FALSE' updates will be visible on screen
     hidden = TRUE
     
@@ -1007,7 +1007,7 @@ package <- function(pkgs, install=TRUE, update=FALSE, quiet=TRUE, verbose=TRUE, 
 
 ##################
 # Optimiazation preparation
-Optim.prep<-function(Response,n.Pops,ASCII.dir,CS_Point.File,CS.exe,Neighbor.Connect=8,Results.dir,Constrained.Max=100,Initial.shape=c(seq(0.2,1,by=0.2),seq(1.25,10.75,by=0.75)),Bootstrap=FALSE,boot.iters=10000,Sample_Proportion=0.75){
+Optim.prep<-function(Response,n.Pops,ASCII.dir,CS_Point.File,CS.exe,Neighbor.Connect=8,Constrained.Max=100,Initial.shape=c(seq(0.2,1,by=0.2),seq(1.25,10.75,by=0.75)),Bootstrap=FALSE,boot.iters=10000,Sample_Proportion=0.75){
   # Install necessary packages
   libs=c("raster", "lme4", "plyr")
   CheckInstallPackage(packages=libs)
@@ -1023,10 +1023,12 @@ Optim.prep<-function(Response,n.Pops,ASCII.dir,CS_Point.File,CS.exe,Neighbor.Con
   ZZ<-ZZ.mat(ID)
   ASCII.files<-list.files(ASCII.dir,pattern="*.asc",full.names=TRUE)
   ASCII.names<-gsub(pattern="*.asc","",x=(list.files(ASCII.dir,pattern="*.asc")))
+  dir.create(file.path(ASCII.dir, "Results"))
+  Results.dir<-paste0(ASCII.dir, "/Results/")
   dir.create(file.path(Results.dir, "tmp"))
   Write.dir <-paste0(Results.dir,"/tmp/")  
-    
-    list(Response.vec=Response.vec,Response.mat=Response,n.Pops=n.Pops,ID=ID,ZZ=ZZ,ASCII.files=ASCII.files,ASCII.names=ASCII.names,ASCII.dir=ASCII.dir,Write.dir=Write.dir,Results.dir=Results.dir,CS_Point.File=CS_Point.File,CS.exe=CS.exe,Neighbor.Connect=Neighbor.Connect,Constrained.Max=Constrained.Max,Initial.shape=Initial.shape,Bootstrap=Bootstrap,boot.iters=boot.iters,Sample_Proportion=Sample_Proportion)
+  
+  list(Response.vec=Response.vec,Response.mat=Response,n.Pops=n.Pops,ID=ID,ZZ=ZZ,ASCII.files=ASCII.files,ASCII.names=ASCII.names,ASCII.dir=ASCII.dir,Write.dir=Write.dir,Results.dir=Results.dir,CS_Point.File=CS_Point.File,CS.exe=CS.exe,Neighbor.Connect=Neighbor.Connect,Constrained.Max=Constrained.Max,Initial.shape=Initial.shape,Bootstrap=Bootstrap,boot.iters=boot.iters,Sample_Proportion=Sample_Proportion)
 }
 
 #########################################
