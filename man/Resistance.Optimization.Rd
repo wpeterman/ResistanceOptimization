@@ -40,7 +40,7 @@ In the Final_CS_Surfaces folder, are the .asc files and Circuitscape output for 
 Bill Peterman
 }
 \note{
-%%  ~~further notes~~
+It is importnat to remember that CIRCUITSCAPE resistances are relative. That is, if landscapes with resistances ranging from 1–10 and 1–100 are run through CIRCUITSCAPE, the resultant pairwise resistance estimates will be pefectly correlated. This poses a challenge for optimization procedures, which often settle on extremely large values. Nonetheless, the shape and relationship of tranformed resistance values, as well as their fit to the provided response data, are meaningful and comparable among tested resistance surfaces.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
