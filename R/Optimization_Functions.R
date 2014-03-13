@@ -9,7 +9,7 @@ PDF.dir <- paste0(Optim.input$Results.dir,"Plots/")
 for (i in 1:nrow(Top.params)){
   ASCII.file <- list.files(Optim.input$ASCII.dir,pattern=paste0(Top.params[i,1],".asc"),full.names=TRUE)
   if(Top.params[i,5]<1e-5 | Top.params[i,6]<1e-5) {
-    cat(paste0("Plotting of ", Top.params[i,1]," could not be completed due to extremely small parameter estimates."),"\n")
+    cat("\n","\n",paste0("Plotting of ", Top.params[i,1]," could not be completed due to extremely small parameter estimates."),"\n")
     next # Use 'next' command to avoid testing invalid combinations    
   } else {
   PLOT.response(PARM=Top.params[i,c(5,6)],Resistance=ASCII.file,equation=Top.params[i,2],AIC=Top.params[i,7], OutputFolder=PDF.dir)
