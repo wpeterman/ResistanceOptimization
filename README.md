@@ -54,3 +54,9 @@ XLAB="Transformed resistance",
 YLAB="Pairwise distance",
 plot.dir=paste0(Optim.input$Results.dir,"Plots/"))
 ```
+
+Further details of of how this method has been implemented can be found in:
+
+Peterman, W. E., G. M. Connette, R. D. Semlitsch, and L. S. Eggert. in press. Ecological resistance surfaces predict fine scale genetic differentiation in a terrestrial woodland salamander. Molecular Ecology:10.1111/mec.12747.
+
+Please cite this paper if you use this method!
