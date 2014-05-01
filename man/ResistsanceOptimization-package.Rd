@@ -30,7 +30,7 @@ Official releases: https://code.google.com/p/circuitscape/downloads/list
 Bill Peterman <bill.peterman@gmail.com>
 }
 \references{
-Please cite: Peterman et al. Molecular Ecology
+Please cite: Peterman, W. E., G. M. Connette, R. D. Semlitsch, and L. S. Eggert. (in press). Ecological resistance surfaces predict fine scale genetic differentiation in a terrestrial woodland salamander. Molecular Ecology:10.1111/mec.12747.
 }
 
 

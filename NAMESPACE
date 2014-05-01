@@ -1,1 +1,3 @@
-exportPattern("^[[:alpha:]]+")
+export(Resistance.Optimization)
+export(Optim.pred)
+export(Diagnostic.Plots)

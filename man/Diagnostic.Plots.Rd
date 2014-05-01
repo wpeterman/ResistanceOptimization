@@ -16,7 +16,7 @@ Provide the full path to the square distance matrix produced by Circuitscape (fi
 Example: paste0(Optim.input$Results.dir,"Final_CS_Surfaces/XXX_resistances.out"
 }
   \item{genetic.dist.vec}{
-Vector of pairwise genetic distance (can supply as "Optim.input$Response.vec" after executing Optim.prep function)
+Vector of pairwise genetic distances (can supply as "Optim.input$Response.vec" after executing Optim.prep function)
 }
   \item{XLAB}{
 Label for x-axis (Defaults to "Estimated resistance")
