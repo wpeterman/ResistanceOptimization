@@ -7,7 +7,7 @@ Create diagnostic plots
 \description{
 This function will generate mixed effect model diagnostic plots following optimization with 'Resistance.Optimization'}
 \usage{
-Diagnostic.Plots(resist.matrix.path, genetic.dist.vec, XLAB = "Estimated resistance", YLAB = "Genetic distance", plot.dir)
+Diagnostic.Plots(resist.matrix.path, genetic.dist.vec, XLAB, YLAB, plot.dir)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

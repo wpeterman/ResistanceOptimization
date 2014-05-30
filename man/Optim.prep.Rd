@@ -8,7 +8,7 @@ Prepare elements for optimization
 This function prepares and compiles the necessary components to execute subsequent optimization functions, and must be run first. To run the example data, download the data from GitHub (url)
 }
 \usage{
-Optim.prep(Response, n.Pops, ASCII.dir, CS_Point.File, CS.exe, Neighbor.Connect = 8, Constrained.Max = 100, Initial.shape = c(seq(0.2, 1, by = 0.2), seq(1.25, 10.75, by = 0.75)), Bootstrap = FALSE, boot.iters = 10000, Sample_Proportion = 0.75)
+Optim.prep(Response, n.Pops, ASCII.dir, CS_Point.File, CS.exe, Neighbor.Connect, Constrained.Max, Initial.shape, Bootstrap, boot.iters, Sample_Proportion)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
