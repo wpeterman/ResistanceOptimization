@@ -1,3 +1,4 @@
 export(Resistance.Optimization)
 export(Optim.prep)
 export(Diagnostic.Plots)
+export(Optim.Boot)
